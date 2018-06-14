@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button four;
     private Button five;
     private Button six;
-//    private Button seven;
+    private Button seven;
     private Button stopStartBut;
 
     MediaRouterForCast mrfc;
@@ -150,24 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 setAllVisible();
             }
         }else if(section==7){
-            if(subSet==1){
-                channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.Playboy_button, R.string.Playboy, R.id.video1, R.id.textView1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.shalun_button, R.string.shalun, R.id.video2, R.id.textView2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.Brazzers_button, R.string.Brazzers, R.id.video3, R.id.textView3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.Penthouse_button, R.string.Penthouse, R.id.video4, R.id.textView4));
-                setAllVisible();
-            }else if(subSet==2){
-                setVisibilityFalse(channVid.get(2));
-                setVisibilityFalse(channVid.get(3));
-                setVisibilityFalse(channVid.get(4));
-                channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.Erox_button, R.string.Erox, R.id.video1, R.id.textView1));
-//                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.Erox_button, R.string.Erox, R.id.video2, R.id.textView2));
-//                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.footy2_button, R.string.footy2, R.id.video3, R.id.textView3));
-//                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.match4_button, R.string.match4, R.id.video4, R.id.textView4));
-                setAllVisible();
-            }
+            
         }
     }
 
@@ -354,22 +337,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        seven = (Button) findViewById(R.id.button7);
-//        seven.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                stopChannels();
-//                section=7;
-//                subSet=1;
-//                getChannels(section,subSet);
-//                allButtonsColorToDefaultOnTopPanel();
-//                seven.setTextColor(getResources().getColor(R.color.colorPrimary));
-//                stopStartBut.setText("Pause");
-//                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
-//                isVideoStopped = false;
-//                allVideoTextToDefault();
-//            }
-//        });
+        seven = (Button) findViewById(R.id.button7);
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopChannels();
+                section=7;
+                subSet=1;
+                getChannels(section,subSet);
+                allButtonsColorToDefaultOnTopPanel();
+                seven.setTextColor(getResources().getColor(R.color.colorPrimary));
+                stopStartBut.setText("Pause");
+                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                isVideoStopped = false;
+                allVideoTextToDefault();
+            }
+        });
     }
 
     public void allButtonsColorToDefaultOnTopPanel(){

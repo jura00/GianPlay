@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">GianPlay</string>
+
+    <string name="h1_button">Առաջին</string>
+    <string name="h2_button">Հ2</string>
+    <string name="h3_button">Հ3</string>
+    <string name="armenia_button">Արմենիա</string>
+    <string name="shant_button">Շանթ</string>
+    <string name="ar_button">Ար</string>
+    <string name="ararat_button">Արարատ</string>
+    <string name="atv_button">ATV</string>
+    <string name="kentron_button">Կենտրոն</string>
+    <string name="hazar_button">1000TV</string>
+    <string name="xit_button">Кинохит</string>
+    <string name="mix_button">KКИНОМИКС</string>
+    <string name="komedia_button">КИНОКОМЕДИЯ</string>
+    <string name="men_button">МУЖСКОЕ КИНО</string>
+    <string name="tnt_button">TNT</string>
+    <string name="cnbc_button">CNBC</string>
+    <string name="bbc_button">BBC</string>
+    <string name="natgeo_button">NatGeo</string>
+    <string name="ru24_button">RU24</string>
+    <string name="match_button">Матч! 1</string>
+    <string name="mtv_button">MTV</string>
+
+    <string name="dar_button">Դար21</string>
+    <string name="erkir_button">Երկիր</string>
+    <string name="armnews_button">նյուզ</string>
+    <string name="eunews_button">eunews</string>
+    <string name="disch_button">Dcover</string>
+    <string name="match2_button">Матч! 2</string>
+    <string name="match3_button">Матч! 3</string>
+    <string name="match4_button">Матч! 4</string>
+    <string name="natgeograph_button">geographic</string>
+    <string name="Science_button">Science</string>
+
+    <string name="MTVDance_button">MTV Dance</string>
+    <string name="BRIDGETV_button">BRIDGE TV</string>
+    <string name="Mezzo_button">Mezzo</string>
+    <string name="kinop1_button">Кинопоказ 1</string>
+    <string name="kinop2_button">Кинопоказ 2</string>
+
+    <string name="eurosport_button">Eurosport 1</string>
+    <string name="footy1_button">Футбол 1</string>
+    <string name="footy2_button">Футбол 2</string>
+
+    <string name="Playboy_button">Playboy</string>
+    <string name="Brazzers_button">Brazzers</string>
+    <string name="isk_button">Искушение</string>
+    <string name="shalun_button">Шалун</string>
+    <string name="Erox_button">Erox</string>
+    <string name="Penthouse_button">Penthouse</string>
+
+
+
+    <string name="h1">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/601/index.m3u8</string>
+    <string name="h2">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/603/index.m3u8</string>
+    <string name="h3">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/612/index.m3u8</string>
+    <string name="armenia">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/605/index.m3u8</string>
+    <string name="shant">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/604/index.m3u8</string>
+    <string name="ar">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/610/index.m3u8</string>
+    <string name="ararat">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/620/index.m3u8</string>
+    <string name="atv">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/609/index.m3u8</string>
+    <string name="kentron">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/606/index.m3u8</string>
+    <string name="hazar">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/131/index.m3u8</string>
+    <string name="xit">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/516/index.m3u8</string>
+    <string name="mix">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/509/index.m3u8</string>
+    <string name="komedia">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/145/index.m3u8</string>
+    <string name="men">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/164/index.m3u8</string>
+    <string name="tnt">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/502/index.m3u8</string>
+    <string name="cnbc">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/962/index.m3u8</string>
+    <string name="bbc">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/545/index.m3u8</string>
+    <string name="natgeo">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/216/index.m3u8</string>
+    <string name="ru24">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/507/index.m3u8</string>
+    <string name="match">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/222/index.m3u8</string>
+    <string name="mtv">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/153/index.m3u8</string>
+
+    <string name="dar">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/602/index.m3u8</string>
+    <string name="erkir">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/608/index.m3u8</string>
+    <string name="armnews">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/611/index.m3u8</string>
+    <string name="eunews">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/969/index.m3u8</string>
+    <string name="disch">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/227/index.m3u8</string>
+    <string name="match2">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/211/index.m3u8</string>
+    <string name="match3">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/206/index.m3u8</string>
+    <string name="match4">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/123/index.m3u8</string>
+    <string name="geographic">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/134/index.m3u8</string>
+    <string name="Science">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/136/index.m3u8</string>
+
+    <string name="MTVDance">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/558/index.m3u8</string>
+    <string name="BRIDGETV">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/711/index.m3u8</string>
+    <string name="Mezzo">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/707/index.m3u8</string>
+    <string name="kinop1">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/913/index.m3u8</string>
+    <string name="kinop2">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/912/index.m3u8</string>
+
+    <string name="eurosport">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/228/index.m3u8</string>
+    <string name="footy1">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/800/index.m3u8</string>
+    <string name="footy2">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/801/index.m3u8</string>
+
+
+    <string name="Playboy">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/527/index.m3u8</string>
+    <string name="Brazzers">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/910/index.m3u8</string>
+    <string name="isk">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/919/index.m3u8</string>
+    <string name="shalun">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/922/index.m3u8</string>
+    <string name="Erox">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/813/index.m3u8</string>
+    <string name="Penthouse">http://3b70ebc4.kablakaka.ru/iptv/8STFMNLEWA983T/1073/index.m3u8</string>
+
+    <!--<string name="app_id"></string>-->
+    <string name="pause_video">Pause Video</string>
+    <string name="resume_video">Resume Video</string>
+    <string name="video_title">GianTV</string>
+    <string name="content_type_mp4">video/mp4</string>
+</resources>

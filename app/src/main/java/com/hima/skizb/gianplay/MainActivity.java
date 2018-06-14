@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 setAllVisible();
             }
         }else if(section==7){
-            
+
         }
     }
 

@@ -1,56 +1,6 @@
 <resources>
     <string name="app_name">GianPlay</string>
 
-    <string name="h1_button">Առաջին</string>
-    <string name="h2_button">Հ2</string>
-    <string name="h3_button">Հ3</string>
-    <string name="armenia_button">Արմենիա</string>
-    <string name="shant_button">Շանթ</string>
-    <string name="ar_button">Ար</string>
-    <string name="ararat_button">Արարատ</string>
-    <string name="atv_button">ATV</string>
-    <string name="kentron_button">Կենտրոն</string>
-    <string name="hazar_button">1000TV</string>
-    <string name="xit_button">Кинохит</string>
-    <string name="mix_button">KКИНОМИКС</string>
-    <string name="komedia_button">КИНОКОМЕДИЯ</string>
-    <string name="men_button">МУЖСКОЕ КИНО</string>
-    <string name="tnt_button">TNT</string>
-    <string name="cnbc_button">CNBC</string>
-    <string name="bbc_button">BBC</string>
-    <string name="natgeo_button">NatGeo</string>
-    <string name="ru24_button">RU24</string>
-    <string name="match_button">Матч! 1</string>
-    <string name="mtv_button">MTV</string>
-
-    <string name="dar_button">Դար21</string>
-    <string name="erkir_button">Երկիր</string>
-    <string name="armnews_button">նյուզ</string>
-    <string name="eunews_button">eunews</string>
-    <string name="disch_button">Dcover</string>
-    <string name="match2_button">Матч! 2</string>
-    <string name="match3_button">Матч! 3</string>
-    <string name="match4_button">Матч! 4</string>
-    <string name="natgeograph_button">geographic</string>
-    <string name="Science_button">Science</string>
-
-    <string name="MTVDance_button">MTV Dance</string>
-    <string name="BRIDGETV_button">BRIDGE TV</string>
-    <string name="Mezzo_button">Mezzo</string>
-    <string name="kinop1_button">Кинопоказ 1</string>
-    <string name="kinop2_button">Кинопоказ 2</string>
-
-    <string name="eurosport_button">Eurosport 1</string>
-    <string name="footy1_button">Футбол 1</string>
-    <string name="footy2_button">Футбол 2</string>
-
-    <string name="Playboy_button">Playboy</string>
-    <string name="Brazzers_button">Brazzers</string>
-    <string name="isk_button">Искушение</string>
-    <string name="shalun_button">Шалун</string>
-    <string name="Erox_button">Erox</string>
-    <string name="Penthouse_button">Penthouse</string>
-
     <!--<string name="app_id"></string>-->
     <string name="pause_video">Pause Video</string>
     <string name="resume_video">Resume Video</string>

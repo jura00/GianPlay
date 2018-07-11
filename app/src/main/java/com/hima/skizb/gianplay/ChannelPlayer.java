@@ -58,6 +58,7 @@ public class ChannelPlayer{
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 //                    Toast.makeText(context,"yeah", Toast.LENGTH_SHORT).show();
+            try {
                 MediaMetadata mediaMetadata = new MediaMetadata( MediaMetadata.MEDIA_TYPE_MOVIE );
                 mediaMetadata.putString( MediaMetadata.KEY_TITLE, context.getString(name) );
 
@@ -66,7 +67,7 @@ public class ChannelPlayer{
                         .setStreamType( MediaInfo.STREAM_TYPE_BUFFERED )
                         .setMetadata( mediaMetadata )
                         .build();
-                try {
+
                     MRFC.mRemoteMediaPlayer.load( MRFC.mApiClient, mediaInfo, true )
                             .setResultCallback( new ResultCallback<RemoteMediaPlayer.MediaChannelResult>() {
                                 @Override
@@ -78,7 +79,7 @@ public class ChannelPlayer{
                             } );
                 } catch( Exception e ) {
                 }
-                Toast.makeText(context,context.getString(name), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context,context.getString(name), Toast.LENGTH_SHORT).show();
                 context.allVideoTextToDefault();
                 textView.setTextColor(context.getResources().getColor(R.color.colorPrimary));
                 return true;

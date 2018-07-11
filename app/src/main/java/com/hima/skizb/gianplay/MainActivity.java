@@ -1,32 +1,14 @@
 package com.hima.skizb.gianplay;
 
-import android.graphics.Color;
-import android.support.v4.view.MenuItemCompat;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.MediaRouteActionProvider;
-import android.support.v7.media.MediaRouteSelector;
-import android.support.v7.media.MediaRouter;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.cast.ApplicationMetadata;
-import com.google.android.gms.cast.Cast;
-import com.google.android.gms.cast.CastDevice;
-import com.google.android.gms.cast.CastMediaControlIntent;
-import com.google.android.gms.cast.MediaStatus;
-import com.google.android.gms.cast.RemoteMediaPlayer;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
     private Map<Integer, ChannelPlayer> channVid;
@@ -43,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button five;
     private Button six;
     private Button seven;
-    private Button stopStartBut;
+    private Button resumePauseBut;
 
     MediaRouterForCast mrfc;
     @Override
@@ -58,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         startChannels();
         topButtonPanleStart();
-        one.setTextColor(getResources().getColor(R.color.colorPrimary));
+        one.setTextColor(getResources().getColor(R.color.black));
         buttomButtonPanelStart();
-        stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+        resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
 
     }
 
@@ -182,20 +164,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttomButtonPanelStart(){
-        stopStartBut = (Button) findViewById(R.id.buttonStopStart);
-        stopStartBut.setOnClickListener(new View.OnClickListener() {
+        resumePauseBut = (Button) findViewById(R.id.buttonStopStart);
+        resumePauseBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 for (Integer s: channVid.keySet()) {
                     if(!isVideoStopped) {
                         channVid.get(s).stopVideo();
-                        stopStartBut.setText("Resume");
-                        stopStartBut.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        resumePauseBut.setText("Resume");
+                        resumePauseBut.setTextColor(getResources().getColor(R.color.colorPrimary));
                     }
                     else {
                         channVid.get(s).startVideo();
-                        stopStartBut.setText("Pause");
-                        stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                        resumePauseBut.setText("Pause");
+                        resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
 
                     }
                 }
@@ -210,8 +192,8 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 if(subSet<3) subSet++;
                 getChannels(section,subSet);
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
 
@@ -226,12 +208,31 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 if(subSet>1)subSet--;
                 getChannels(section,subSet);
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
         });
+
+        Button updateButton = (Button) findViewById(R.id.buttonUpdate);
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopChannels();
+                resumePauseBut.setText("Resume");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorPrimary));
+                isVideoStopped = true;
+//                allVideoTextToDefault();
+                startsUpdateIntent();
+
+            }
+        });
+    }
+
+    public void startsUpdateIntent(){
+        startActivity(new Intent(this, update.class));
+
     }
 
     public void topButtonPanleStart(){
@@ -245,8 +246,9 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 one.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                one.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
@@ -262,8 +264,9 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 two.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                two.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
@@ -279,8 +282,9 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 three.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                three.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
@@ -296,8 +300,9 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 four.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                four.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
@@ -313,8 +318,9 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 five.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                five.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
@@ -330,38 +336,45 @@ public class MainActivity extends AppCompatActivity {
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 six.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
+                six.setBackgroundColor(getResources().getColor(R.color.white));
+                resumePauseBut.setText("Pause");
+                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
                 isVideoStopped = false;
                 allVideoTextToDefault();
             }
         });
 
-        seven = (Button) findViewById(R.id.button7);
-        seven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                stopChannels();
-                section=7;
-                subSet=1;
-                getChannels(section,subSet);
-                allButtonsColorToDefaultOnTopPanel();
-                seven.setTextColor(getResources().getColor(R.color.colorPrimary));
-                stopStartBut.setText("Pause");
-                stopStartBut.setTextColor(getResources().getColor(R.color.colorAccent));
-                isVideoStopped = false;
-                allVideoTextToDefault();
-            }
-        });
+//        seven = (Button) findViewById(R.id.button7);
+//        seven.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                stopChannels();
+//                section=7;
+//                subSet=1;
+//                getChannels(section,subSet);
+//                allButtonsColorToDefaultOnTopPanel();
+//                seven.setTextColor(getResources().getColor(R.color.colorPrimary));
+//                resumePauseBut.setText("Pause");
+//                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
+//                isVideoStopped = false;
+//                allVideoTextToDefault();
+//            }
+//        });
     }
 
     public void allButtonsColorToDefaultOnTopPanel(){
         one.setTextColor(getResources().getColor(R.color.black));
+        one.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         two.setTextColor(getResources().getColor(R.color.black));
+        two.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         three.setTextColor(getResources().getColor(R.color.black));
+        three.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         four.setTextColor(getResources().getColor(R.color.black));
+        four.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         five.setTextColor(getResources().getColor(R.color.black));
+        five.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         six.setTextColor(getResources().getColor(R.color.black));
+        six.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 //        seven.setTextColor(getResources().getColor(R.color.black));
 
     }
@@ -375,6 +388,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mrfc.onResume();
+        resumePauseBut.setText("Pause");
+        resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
+        isVideoStopped = false;
     }
 
     @Override

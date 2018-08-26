@@ -7,6 +7,5 @@
     <string name="resume_video">Resume Video</string>
     <string name="video_title">GianPlay </string>
     <string name="content_type_mp4">video/mp4</string>
-    <string name="update_link">https://1drv.ms/f/s!Ajy1Vmz7sAbI1k4IBxqh9f9D4Ko7</string>
     <string name="title_activity_play_full_screen">PlayFullScreen</string>
 </resources>

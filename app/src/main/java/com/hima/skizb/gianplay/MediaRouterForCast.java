@@ -219,7 +219,7 @@ public class MediaRouterForCast {
                         Cast.CastApi.removeMessageReceivedCallbacks( mApiClient, mRemoteMediaPlayer.getNamespace() );
                         mRemoteMediaPlayer = null;
                     }
-                } catch( IOException e ) {
+                } catch( Exception e ) {
                     //Log.e( TAG, "Exception while removing application " + e );
                 }
                 mApplicationStarted = false;

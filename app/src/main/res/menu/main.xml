@@ -2,10 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/title"
+        android:title="@string/version"
+        app:showAsAction="always"
+        android:visible="true"
+        />
+
     <item android:id="@+id/media_route_menu_item"
         android:title="Chromecast"
         app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
         app:showAsAction="always"
         />
 
+    <item
+        android:id="@+id/gianpc"
+        android:title="GianPC"
+        android:icon="@drawable/ic_gianpc"
+        app:showAsAction="always"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/update"
+        android:title="UPDATE"
+        android:icon="@drawable/ic_update"
+        app:showAsAction="always"
+        android:visible="true"
+        />
 </menu>

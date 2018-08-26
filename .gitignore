@@ -7,3 +7,16 @@
 /build
 /captures
 .externalNativeBuild
+drawable-hdpi/
+drawable-mdpi/
+drawable-xhdpi/
+drawable-xxhdpi/
+layout/activity_full_screen.xml
+mipmap-hdpi/ic_launcher_foreground.png
+mipmap-mdpi/ic_launcher_foreground.png
+mipmap-xhdpi/ic_launcher_foreground.png
+mipmap-xxhdpi/ic_launcher_foreground.png
+mipmap-xxxhdpi/ic_launcher_foreground.png
+values/dimens.xml
+values/ic_launcher_background.xml
+values/tvChannels.xml

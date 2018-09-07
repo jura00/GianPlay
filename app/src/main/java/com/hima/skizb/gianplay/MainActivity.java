@@ -317,7 +317,6 @@ public class MainActivity extends AppCompatActivity {
         for (TextView t : pageNums){
            t.setTextColor(getResources().getColor(R.color.black));
         }
-        pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
     }
 
     public Intent startsUpdateIntent(){
@@ -344,6 +343,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -364,6 +364,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -384,6 +385,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -404,6 +406,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -424,6 +427,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -444,6 +448,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -464,6 +469,7 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
                 allPageNumsColorToBlack();
+                pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 

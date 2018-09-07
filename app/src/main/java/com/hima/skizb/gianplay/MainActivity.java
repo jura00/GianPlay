@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private Button connectBut;
     private EditText iptext;
     private List<TextView> pageNums;
+    private int sectionNumOfPages = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -262,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         isVideoStopped =! isVideoStopped;
+        makeNumOfPagesVisible(sectionNumOfPages);
     }
 
     public void bottomButtonPanelStart(){
@@ -280,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 stopChannels();
-                if(subSet<3) subSet++;
+                if(subSet<sectionNumOfPages) subSet++;
                 getChannels(section,subSet);
 //                resumePauseBut.setText("Pause");
 //                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
@@ -333,6 +335,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=1;
                 subSet=1;
+                sectionNumOfPages =3;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 one.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -354,6 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=2;
                 subSet=1;
+                sectionNumOfPages =2;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 two.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -375,6 +379,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=3;
                 subSet=1;
+                sectionNumOfPages = 1;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 three.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -396,6 +401,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=4;
                 subSet=1;
+                sectionNumOfPages =1;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 four.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -417,6 +423,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=5;
                 subSet=1;
+                sectionNumOfPages =1;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 five.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -438,6 +445,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=6;
                 subSet=1;
+                sectionNumOfPages =2;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 six.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -459,6 +467,7 @@ public class MainActivity extends AppCompatActivity {
                 stopChannels();
                 section=7;
                 subSet=1;
+                sectionNumOfPages = 3;
                 getChannels(section,subSet);
                 allButtonsColorToDefaultOnTopPanel();
                 seven.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -491,6 +500,15 @@ public class MainActivity extends AppCompatActivity {
 //                allVideoTextToDefault();
 //            }
 //        });
+    }
+
+    private void makeNumOfPagesVisible(int i) {
+        for (TextView t: pageNums){
+            t.setVisibility(TextView.GONE);
+        }
+        for(int j = 0; j<i; j++){
+            pageNums.get(j).setVisibility(TextView.VISIBLE);
+        }
     }
 
     public void allButtonsColorToDefaultOnTopPanel(){

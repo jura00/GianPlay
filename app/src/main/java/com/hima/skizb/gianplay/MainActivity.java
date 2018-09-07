@@ -3,7 +3,6 @@ package com.hima.skizb.gianplay;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout gianpcPanel;
     private Button connectBut;
     private EditText iptext;
+    private List<TextView> pageNums;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +52,15 @@ public class MainActivity extends AppCompatActivity {
         gianpcPanel = (LinearLayout)findViewById(R.id.gian_panel);
         mrfc = new MediaRouterForCast(this);
         mrfc.initMediaRouter();
-
+        makePageNumbers();
         getChannels(section,subSet);
 
 
 //        startChannels();
         topButtonPanleStart();
         one.setTextColor(getResources().getColor(R.color.black));
-        buttomButtonPanelStart();
+        pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
+        bottomButtonPanelStart();
 //        resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
 //        resumePauseButPressed();
         isVideoStopped = false;
@@ -65,7 +68,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void makePageNumbers(){
+        pageNums = new ArrayList<TextView>();
+        pageNums.add((TextView)findViewById(R.id.sctextView1));
+        pageNums.add((TextView)findViewById(R.id.sctextView2));
+        pageNums.add((TextView)findViewById(R.id.sctextView3));
+        pageNums.add((TextView)findViewById(R.id.sctextView4));
+    }
+
     public void currentChannelsToDefault(){getChannels(section,subSet);}
+
     private void getChannels(int section, int subSet){
         if(section==1){
             if(subSet==1){
@@ -234,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resumePauseButPressed(){
-        Toast.makeText(this,channVid.keySet().size()+"",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,channVid.keySet().size()+"",Toast.LENGTH_SHORT).show();
         for (Integer s: channVid.keySet()) {
             if(!isVideoStopped) {
                 channVid.get(s).stopVideo();
@@ -252,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
         isVideoStopped =! isVideoStopped;
     }
 
-    public void buttomButtonPanelStart(){
+    public void bottomButtonPanelStart(){
         resumePauseBut = (Button) findViewById(R.id.buttonStopStart);
         resumePauseBut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -276,6 +288,8 @@ public class MainActivity extends AppCompatActivity {
                 resumePauseButPressed();
                 allVideoTextToDefault();
 //                startChannels();
+                allPageNumsColorToBlack();
+                pageNums.get(subSet-1).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -291,10 +305,19 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
+                pageNums.get(subSet-1).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
 
+    }
+
+    private void allPageNumsColorToBlack() {
+        for (TextView t : pageNums){
+           t.setTextColor(getResources().getColor(R.color.black));
+        }
+        pageNums.get(0).setTextColor(getResources().getColor(R.color.colorPrimary));
     }
 
     public Intent startsUpdateIntent(){
@@ -320,6 +343,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -339,6 +363,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -358,6 +383,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -377,6 +403,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -396,6 +423,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -415,6 +443,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 
@@ -434,6 +463,7 @@ public class MainActivity extends AppCompatActivity {
                 isVideoStopped = false;
                 resumePauseButPressed();
                 allVideoTextToDefault();
+                allPageNumsColorToBlack();
             }
         });
 

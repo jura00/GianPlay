@@ -178,6 +178,7 @@
                             android:layout_weight="1"
                             android:text="TextView"
                             android:textAlignment="center" />
+
                         <Button
                             android:id="@+id/castbut1"
                             style="@style/Widget.AppCompat.Button.Borderless"
@@ -224,6 +225,7 @@
                             android:layout_weight="1"
                             android:text="TextView"
                             android:textAlignment="center" />
+
                         <Button
                             android:id="@+id/castbut2"
                             style="@style/Widget.AppCompat.Button.Borderless"
@@ -270,6 +272,7 @@
                             android:layout_weight="1"
                             android:text="TextView"
                             android:textAlignment="center" />
+
                         <Button
                             android:id="@+id/castbut3"
                             style="@style/Widget.AppCompat.Button.Borderless"
@@ -314,6 +317,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_weight="1"
                             android:text="TextView" />
+
                         <Button
                             android:id="@+id/castbut4"
                             style="@style/Widget.AppCompat.Button.Borderless"
@@ -331,6 +335,60 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sctextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1  "
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/sctextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2  "
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/sctextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3  "
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/sctextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout

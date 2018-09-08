@@ -1,4 +1,4 @@
-package com.hima.skizb.gianplay;
+package com.hima.skizb.gianplay.logic;
 
 import android.annotation.SuppressLint;
 //import android.media.MediaMetadata;
@@ -8,11 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -20,6 +18,9 @@ import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaMetadata;
 import com.google.android.gms.cast.RemoteMediaPlayer;
 import com.google.android.gms.common.api.ResultCallback;
+import com.hima.skizb.gianplay.MainActivity;
+import com.hima.skizb.gianplay.R;
+import com.hima.skizb.gianplay.gui.FullScreenActivity;
 
 /**
  * Created by root on 6/10/18.
@@ -46,7 +47,7 @@ public class ChannelPlayer{
 
 
 
-    ChannelPlayer(final MainActivity con, MediaRouterForCast MRFCm, int nameM, int urlm, int videoViewID, int textId, int castbuttId){
+    public ChannelPlayer(final MainActivity con, MediaRouterForCast MRFCm, int nameM, int urlm, int videoViewID, int textId, int castbuttId){
         vv=null;
         this.context = con;
         this.videoUrl = urlm;
@@ -79,7 +80,7 @@ public class ChannelPlayer{
 //                context.stopChannels();
 //                context.setVideoSizeToDefault();
                 context.isVideoStopped = false;
-                context.resumePauseButPressed();
+                context.bp.resumePauseButPressed();
 
                 Intent fullScreen=new Intent(context,FullScreenActivity.class);
                 Bundle args = new Bundle();
@@ -131,7 +132,7 @@ public class ChannelPlayer{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                context.allVideoTextToDefault();
+                context.mp.allVideoTextToDefault();
                 chButton.setTextColor(context.getResources().getColor(R.color.colorPrimary));
             }
         });
@@ -189,7 +190,7 @@ public class ChannelPlayer{
         }
     }
 
-    void vidSizeToDefault(){
+    public void vidSizeToDefault(){
 //        DisplayMetrics metrics = new DisplayMetrics(); context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 //        android.widget.LinearLayout.LayoutParams params = (android.widget.LinearLayout.LayoutParams) vv.getLayoutParams();
         DisplayMetrics metrics = new DisplayMetrics(); context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -233,11 +234,11 @@ public class ChannelPlayer{
 
     }
 
-    void resumeVideo(){
+    public void resumeVideo(){
         vv.resume();
     }
 
-    void stopVideo(){
+    public void stopVideo(){
         vv.stopPlayback();
     }
 
@@ -247,11 +248,11 @@ public class ChannelPlayer{
 //        this.destruct();
     }
 
-    void setTextViewColorToDefault(){
+    public void setTextViewColorToDefault(){
         chButton.setTextColor(context.getResources().getColor(R.color.black));
     }
 
-    void setVisibility(boolean visibility, boolean all){
+    public void setVisibility(boolean visibility, boolean all){
         if(visibility){
             resumeVideo();
 //            if(all) {

@@ -24,8 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".update" />
-        <activity android:name=".FullScreenActivity"
+        <activity android:name=".logic.update" />
+        <activity android:name=".gui.FullScreenActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar"
             android:screenOrientation="landscape">
         </activity>

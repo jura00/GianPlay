@@ -1,4 +1,4 @@
-package com.hima.skizb.gianplay;
+package com.hima.skizb.gianplay.gui;
 
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
@@ -9,6 +9,8 @@ import android.util.DisplayMetrics;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import com.hima.skizb.gianplay.R;
 
 import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 

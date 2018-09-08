@@ -1,8 +1,10 @@
-package com.hima.skizb.gianplay;
+package com.hima.skizb.gianplay.logic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
+
+import com.hima.skizb.gianplay.R;
 
 public class update extends AppCompatActivity {
 

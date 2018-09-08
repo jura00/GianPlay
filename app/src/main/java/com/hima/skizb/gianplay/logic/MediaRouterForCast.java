@@ -1,4 +1,4 @@
-package com.hima.skizb.gianplay;
+package com.hima.skizb.gianplay.logic;
 
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -18,6 +18,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.hima.skizb.gianplay.MainActivity;
+import com.hima.skizb.gianplay.R;
 
 import java.io.IOException;
 

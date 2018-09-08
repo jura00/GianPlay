@@ -1,7 +1,9 @@
-package com.hima.skizb.gianplay;
+package com.hima.skizb.gianplay.logic;
 
 import android.util.Log;
 import android.widget.Toast;
+
+import com.hima.skizb.gianplay.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

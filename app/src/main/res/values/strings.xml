@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gian Play</string>
-    <string name="version">v7.2</string>
+    <string name="app_name">GianPlay</string>
+    <string name="version">v7.3</string>
     <!--<string name="app_id"></string>-->
     <string name="pause_video">Pause Video</string>
     <string name="resume_video">Resume Video</string>

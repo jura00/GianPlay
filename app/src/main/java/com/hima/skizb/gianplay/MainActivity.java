@@ -31,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
     public int subSet = 1;
 
     public boolean isVideoStopped = false;
-
-
-
     private Button resumePauseBut;
 
     MediaRouterForCast mrfc;
@@ -227,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-//        mrfc.onPause();
+        mrfc.onPause();
     }
 
     @Override

@@ -101,7 +101,7 @@ public class MediaRouterForCast {
             // End media router discovery
             mMediaRouter.removeCallback( mMediaRouterCallback );
         }
-        context.onPause();
+//        context.onPause();
     }
 
     private class MediaRouterCallback extends MediaRouter.Callback {

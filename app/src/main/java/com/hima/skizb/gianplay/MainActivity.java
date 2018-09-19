@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-//        mrfc.onPause();
+        mrfc.onPause();
     }
 
     @Override

@@ -76,107 +76,107 @@ public class MainActivity extends AppCompatActivity {
             if(subSet==1){
                 channVid = new HashMap<Integer, ChannelPlayer>();
                 channVid.put(1, new ChannelPlayer(this, mrfc, R.string.h1_button, R.string.h1, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.armenia_button, R.string.armenia, R.id.video2, R.id.textView2,R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.atv_button, R.string.atv, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.armnews_button ,R.string.armnews, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.h2_button, R.string.h2, R.id.video2, R.id.textView2,R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.h3_button, R.string.h3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.h4_button,R.string.h4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }else if(subSet==2){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.h2_button, R.string.h2, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.h3_button, R.string.h3, R.id.video2, R.id.textView2,R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.kentron_button, R.string.kentron, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.erkir_button ,R.string.erkir, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.h5_button, R.string.h5, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.h6_button, R.string.h6, R.id.video2, R.id.textView2,R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.h7_button, R.string.h7, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.h8_button,R.string.h8, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }else if(subSet==3){
                 mp.setVisibilityFalse(channVid.get(4), true);
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.ararat_button, R.string.ararat, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.ar_button, R.string.ar, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.dar_button, R.string.dar, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.h9_button, R.string.h9, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.h10_button, R.string.h10, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.h11_button, R.string.h11, R.id.video3, R.id.textView3, R.id.castbut3));
                 mp.setAllVisible();
             }
         }else if(section==2){
             if (subSet==1){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.xit_button, R.string.xit, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.mix_button, R.string.mix, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.komedia_button, R.string.komedia, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.men_button ,R.string.men, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.kino1_button, R.string.kino1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.kino2_button, R.string.kino2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.kino3_button, R.string.kino3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.kino4_button,R.string.kino4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }else if(subSet==2){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.hazar_button, R.string.hazar, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.kinop1_button, R.string.kinop1, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.kinop2_button, R.string.kinop2, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.tnt_button ,R.string.tnt, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.kino5_button, R.string.kino5, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.kino6_button, R.string.kino6, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.kino7_button, R.string.kino7, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.r1_button,R.string.r1, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }
         }else if(section==3){
             if(subSet==1){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.bbc_button, R.string.bbc, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.cnbc_button, R.string.cnbc, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.eunews_button, R.string.eunews, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.ru24_button, R.string.ru24, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.news1_button, R.string.news1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.news2_button, R.string.news2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.news3_button, R.string.news3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.news4_button, R.string.news4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }
         }else if(section==4){
             if(subSet==1){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.mtv_button, R.string.mtv, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.MTVDance_button, R.string.MTVDance, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.BRIDGETV_button, R.string.BRIDGETV, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.Mezzo_button ,R.string.Mezzo, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.music1_button, R.string.music1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.music2_button, R.string.music2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.music3_button, R.string.music3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.music4_button,R.string.music4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
 
             }
         }else if(section==5){
             if (subSet==1){
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.natgeo_button, R.string.natgeo, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.disch_button, R.string.disch, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.natgeograph_button, R.string.geographic, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.Science_button, R.string.Science, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.science1_button, R.string.science1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.science2_button, R.string.science2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.science3_button, R.string.science3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.science4_button, R.string.science4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }
         }else if(section==6){
             if(subSet==1) {
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.match_button, R.string.match, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.match2_button, R.string.match2, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.match3_button, R.string.match3, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.match4_button, R.string.match4, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.sport1_button, R.string.sport1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.sport2_button, R.string.sport2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.sport3_button, R.string.sport3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.sport4_button, R.string.sport4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             }else if(subSet==2){
                 mp.setVisibilityFalse(channVid.get(4), true);
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.eurosport_button, R.string.eurosport, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.footy1_button, R.string.footy1, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.footy2_button, R.string.footy2, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.sport5_button, R.string.sport5, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.sport6_button, R.string.sport6, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.sport7_button, R.string.sport7, R.id.video3, R.id.textView3, R.id.castbut3));
 //                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.match4_button, R.string.match4, R.id.video4, R.id.textView4));
                 mp.setAllVisible();
             }
         }else if(section==7) {
             if (subSet == 1) {
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.nbo_button, R.string.nbo, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.nbo_signature_button, R.string.nbo_signature, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.nbo_comedy_button, R.string.nbo_comedy, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.historyUS_button, R.string.historyUS, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.us1_button, R.string.us1, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.us2_button, R.string.us2, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.us3_button, R.string.us3, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.us4_button, R.string.us4, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             } else if (subSet == 2) {
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.showtime2_button, R.string.showtime2, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.starz_button, R.string.starz, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.tlc_button, R.string.tlc, R.id.video3, R.id.textView3, R.id.castbut3));
-                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.cbs_button, R.string.cbs, R.id.video4, R.id.textView4, R.id.castbut4));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.us5_button, R.string.us5, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.us6_button, R.string.us6, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.us7_button, R.string.us7, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(4, new ChannelPlayer(this, mrfc, R.string.us8_button, R.string.us8, R.id.video4, R.id.textView4, R.id.castbut4));
                 mp.setAllVisible();
             } else if (subSet == 3) {
                 mp.setVisibilityFalse(channVid.get(4), true);
                 channVid = new HashMap<Integer, ChannelPlayer>();
-                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.showtime_button, R.string.showtime, R.id.video1, R.id.textView1, R.id.castbut1));
-                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.amc_button, R.string.amc, R.id.video2, R.id.textView2, R.id.castbut2));
-                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.syfy_us_button, R.string.syfy_us, R.id.video3, R.id.textView3, R.id.castbut3));
+                channVid.put(1, new ChannelPlayer(this, mrfc, R.string.us9_button, R.string.us9, R.id.video1, R.id.textView1, R.id.castbut1));
+                channVid.put(2, new ChannelPlayer(this, mrfc, R.string.us10_button, R.string.us10, R.id.video2, R.id.textView2, R.id.castbut2));
+                channVid.put(3, new ChannelPlayer(this, mrfc, R.string.us11_button, R.string.us11, R.id.video3, R.id.textView3, R.id.castbut3));
 //                    channVid.put(4, new ChannelPlayer(this, mrfc, R.string.ru24_button, R.string.ru24, R.id.video4, R.id.textView4));
                 mp.setAllVisible();
             }
@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-        mrfc.onPause();
+//        mrfc.onPause();
     }
 
     @Override

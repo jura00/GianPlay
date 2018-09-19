@@ -156,10 +156,10 @@ public class MediaRouterForCast {
                                                         Status status = applicationConnectionResult.getStatus();
                                                         if( status.isSuccess() ) {
                                                             //Values that can be useful for storing/logic
-                                                            ApplicationMetadata applicationMetadata = applicationConnectionResult.getApplicationMetadata();
-                                                            String sessionId = applicationConnectionResult.getSessionId();
-                                                            String applicationStatus = applicationConnectionResult.getApplicationStatus();
-                                                            boolean wasLaunched = applicationConnectionResult.getWasLaunched();
+//                                                            ApplicationMetadata applicationMetadata = applicationConnectionResult.getApplicationMetadata();
+//                                                            String sessionId = applicationConnectionResult.getSessionId();
+//                                                            String applicationStatus = applicationConnectionResult.getApplicationStatus();
+//                                                            boolean wasLaunched = applicationConnectionResult.getWasLaunched();
 
                                                             mApplicationStarted = true;
                                                             reconnectChannels( null );

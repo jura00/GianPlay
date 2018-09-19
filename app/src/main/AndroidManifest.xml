@@ -26,7 +26,7 @@
         </activity>
         <activity android:name=".logic.update" />
         <activity android:name=".gui.FullScreenActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape">
         </activity>
     </application>

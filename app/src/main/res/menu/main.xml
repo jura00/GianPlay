@@ -5,15 +5,8 @@
     <item
         android:id="@+id/title"
         android:title="@string/version"
-        app:showAsAction="always"
         android:visible="true"
-        />
-
-    <item android:id="@+id/media_route_menu_item"
-        android:title="Chromecast"
-        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
-        app:showAsAction="always"
-        />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/gianpc"
@@ -23,6 +16,11 @@
         android:visible="true"
         />
 
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:title="Chromecast"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        app:showAsAction="always" />
     <item
         android:id="@+id/update"
         android:title="UPDATE"

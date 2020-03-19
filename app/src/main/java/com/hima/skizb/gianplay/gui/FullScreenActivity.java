@@ -22,10 +22,15 @@ public class FullScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_full_screen);
 //        vv = (VideoView) findViewById(R.id.FullScreenVideoView);
         Bundle args = getIntent().getExtras();
-        int videoUrl =args.getInt("link");
-        Uri url = Uri.parse(getString(videoUrl));
-        vv = (VideoView) findViewById(R.id.FullScreenVideoView);
-        vv.setVideoURI(url);
+        if (args.getInt("option")==1) {
+            Uri url = Uri.parse(getString(args.getInt("link")));
+            vv = (VideoView) findViewById(R.id.FullScreenVideoView);
+            vv.setVideoURI(url);
+        }else {
+            Uri url = Uri.parse(args.getString("slink"));
+            vv = (VideoView) findViewById(R.id.FullScreenVideoView);
+            vv.setVideoURI(url);
+        }
         stretchScreenToEdges();
         vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @SuppressLint("ClickableViewAccessibility")

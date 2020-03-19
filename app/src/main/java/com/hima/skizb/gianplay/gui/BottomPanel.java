@@ -51,16 +51,25 @@ public class BottomPanel {
             @Override
             public void onClick(View view) {
                 context.mp.stopChannels();
-                if(context.subSet<context.sectionNumOfPages) context.subSet++;
-                context.getChannels(context.section, context.subSet);
+                if(context.section != 8) {
+                    if (context.subSet < context.sectionNumOfPages) context.subSet++;
+                    context.getChannels(context.section, context.subSet);
 //                resumePauseBut.setText("Pause");
 //                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
-                context.isVideoStopped = false;
-                resumePauseButPressed();
-                context.mp.allVideoTextToDefault();
+                    context.isVideoStopped = false;
+                    resumePauseButPressed();
+                    context.mp.allVideoTextToDefault();
 //                startChannels();
-                context.mp.allPageNumsColorToBlack(context.pageNums);
-                context.pageNums.get(context.subSet-1).setTextColor(context.getResources().getColor(R.color.colorPrimary));
+                    context.mp.allPageNumsColorToBlack(context.pageNums);
+                    context.pageNums.get(context.subSet - 1).setTextColor(context.getResources().getColor(R.color.colorPrimary));
+                }else {
+                    if(context.s8ch < (context.allChannels.size()/8)-1) context.s8ch++;
+
+                    context.getChannels(context.section, context.subSet);
+                    context.isVideoStopped = false;
+                    resumePauseButPressed();
+                    context.mp.allVideoTextToDefault();
+                }
             }
         });
 
@@ -68,16 +77,25 @@ public class BottomPanel {
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.mp.stopChannels();
-                if(context.subSet>1)context.subSet--;
-                context.getChannels(context.section,context.subSet);
+                if (context.section != 8) {
+                    context.mp.stopChannels();
+                    if (context.subSet > 1) context.subSet--;
+                    context.getChannels(context.section, context.subSet);
 //                resumePauseBut.setText("Pause");
 //                resumePauseBut.setTextColor(getResources().getColor(R.color.colorAccent));
-                context.isVideoStopped = false;
-                resumePauseButPressed();
-                context.mp.allVideoTextToDefault();
-                context.mp.allPageNumsColorToBlack(context.pageNums);
-                context.pageNums.get(context.subSet-1).setTextColor(context.getResources().getColor(R.color.colorPrimary));
+                    context.isVideoStopped = false;
+                    resumePauseButPressed();
+                    context.mp.allVideoTextToDefault();
+                    context.mp.allPageNumsColorToBlack(context.pageNums);
+                    context.pageNums.get(context.subSet - 1).setTextColor(context.getResources().getColor(R.color.colorPrimary));
+                }else {
+                    if(context.s8ch > 0) context.s8ch--;
+
+                    context.getChannels(context.section, context.subSet);
+                    context.isVideoStopped = false;
+                    resumePauseButPressed();
+                    context.mp.allVideoTextToDefault();
+                }
             }
         });
 

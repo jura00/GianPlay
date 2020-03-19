@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:layout_height="match_parent">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/white"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPages"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:context="com.hima.skizb.gianplay.MainActivity">
+
 
         <LinearLayout
             android:id="@+id/gian_panel"
@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="10.0.0.0:0000"
                 android:inputType="textPhonetic" />
 
             <Button
@@ -52,9 +53,10 @@
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="115dp"
             android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbars="none">
 
@@ -64,7 +66,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:background="@color/colorPrimary"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -131,297 +133,544 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="UK" />
-            </LinearLayout>
-        </HorizontalScrollView>
+                    android:text="All CH" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideOverlay">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
+                <Button
+                    android:id="@+id/button9"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
-
-                    <VideoView
-                        android:id="@+id/video1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:visibility="visible" />
-
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp">
-
-                        <Button
-                            android:id="@+id/textView1"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:text="TextView"
-                            android:textAlignment="textStart"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/castbut1"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:text="Cast"
-                            android:textAlignment="textEnd"
-                            app:layout_constraintEnd_toEndOf="parent" />
-                    </android.support.constraint.ConstraintLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
-
-                    <VideoView
-                        android:id="@+id/video2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:visibility="visible" />
-
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp">
-
-                        <Button
-                            android:id="@+id/textView2"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:text="TextView"
-                            android:textAlignment="textStart"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/castbut2"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:text="Cast"
-                            android:textAlignment="textEnd"
-                            app:layout_constraintEnd_toEndOf="parent" />
-                    </android.support.constraint.ConstraintLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
-
-                    <VideoView
-                        android:id="@+id/video3"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:visibility="visible" />
-
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp">
-
-                        <Button
-                            android:id="@+id/textView3"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:text="TextView"
-                            android:textAlignment="textStart"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/castbut3"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:text="Cast"
-                            android:textAlignment="textEnd"
-                            app:layout_constraintEnd_toEndOf="parent" />
-                    </android.support.constraint.ConstraintLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
-
-                    <VideoView
-                        android:id="@+id/video4"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:visibility="visible" />
-
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp">
-
-                        <Button
-                            android:id="@+id/textView4"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="200dp"
-                            android:layout_height="51dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:text="TextView"
-                            android:textAlignment="textStart"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/castbut4"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:text="Cast"
-                            android:textAlignment="textEnd"
-                            app:layout_constraintEnd_toEndOf="parent" />
-                    </android.support.constraint.ConstraintLayout>
-                </LinearLayout>
+                    android:layout_weight="1"
+                    android:text="SERVER" />
             </LinearLayout>
         </ScrollView>
 
-    </LinearLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/linearLayoutPages"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:id="@+id/linearPages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:id="@+id/sctextView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" 1  "
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/sctextView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2  "
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/sctextView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3  "
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/sctextView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4 "
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-        </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <Button
-            android:id="@+id/buttonPrev"
-            style="@style/Widget.AppCompat.Button.Borderless"
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/gianPlayMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="Preveous"
-            android:textColor="@color/black" />
+            android:visibility="gone">
 
-        <Button
-            android:id="@+id/buttonStopStart"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            <ScrollView
+                android:id="@+id/eventScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarStyle="outsideOverlay"
+                tools:layout_editor_absoluteX="526dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView1"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut1"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView2"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut2"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView3"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut3"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView4"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="51dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut4"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView5"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="51dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut5"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video6"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView6"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="51dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut6"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video7"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView7"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="51dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut7"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <VideoView
+                            android:id="@+id/video8"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Button
+                                android:id="@+id/textView8"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="200dp"
+                                android:layout_height="51dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="TextView"
+                                android:textAlignment="textStart"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <Button
+                                android:id="@+id/castbut8"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:text="Cast"
+                                android:textAlignment="textEnd"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2">
+
+                <LinearLayout
+                    android:id="@+id/linearPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/sctextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" 1  "
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/sctextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2  "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/sctextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3  "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/sctextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4 "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/buttonPrev"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Preveous"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/buttonStopStart"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="Pause"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/buttonNext"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Next"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/gianPlayServer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:text="Pause"
-            android:visibility="visible" />
+            android:visibility="visible">
 
-        <Button
-            android:id="@+id/buttonNext"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="Next"
-            android:textColor="@color/black" />
+            <ScrollView
+                android:id="@+id/serverScroll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbarStyle="outsideOverlay"
+                app:layout_constraintBottom_toTopOf="@+id/media_control"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="526dp">
+
+                <LinearLayout
+                    android:id="@+id/serverFileBrowser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/media_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="104dp">
+
+                <Button
+                    android:id="@+id/backbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Back"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="104dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0"
+                    app:tickMarkTint="#FFFFFF" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
 
